@@ -1,0 +1,401 @@
+/*
+
+Theme Name: BootstrapTourism
+Theme URI:
+Description: Custom Wordpress theme
+Author: Xola Sikafungana
+Author URI:
+Version: 1.0.0
+Tags: responsive, post types, mobile
+
+*/
+
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+body
+{
+    color: #5a5a5a;
+    font-family: Arial;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    /*text-transform: uppercase;*/
+    font-weight: normal;
+    color: #333333;
+}
+
+h1,
+h2,
+h3
+{
+    /*padding: 20px 0px 10px;*/
+}
+
+h1{
+    font-size: 30px
+}
+
+h2
+{
+    font-size: 27px;
+}
+
+h3 {
+    /*font-size: 26px;*/
+}
+
+h4,
+h5,
+h6
+{
+    /*padding: 20px 0px 5px;*/
+}
+
+a
+{
+    text-decoration: none;
+    color: #428bca;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+a:focus
+{
+    /*outline: none !important;*/
+}
+
+img
+{
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+a img
+{
+    border: none;
+}
+
+p
+{
+    padding: 15px 0 0;
+}
+
+p.more-link-wrap
+{
+    /*padding: 10px 0px 0px;*/
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+textarea 
+{
+/*    border: 1px solid #E5E5E5;
+    padding: 5px 8px;
+    font-size: 17px;
+    color: #878787;
+    border-radius: 0;
+    font-family: "Lato","Oswald",sans-serif;
+    margin: 0 !important;*/
+}
+
+a.button, 
+.button,
+button,
+input[type="submit"]
+{
+/*    cursor: pointer;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 14px;
+    background:  #DC0000;
+    border: 1px solid #FFF;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 0 !important;
+    appearance: normal !important;
+    -webkit-appearance: none;
+    transition: background 0.5s 0s, border 0.5s 0s, text-shadow 0.25s 0s;
+    -webkit-transition: background 0.5s 0s, border 0.5s 0s, text-shadow 0.25s 0s;*/
+}
+a.button:hover, 
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+.main-slider .caption a:hover
+{
+}
+
+.wp-caption 
+{
+/*    background: #efefef;
+    border-radius: 3px;
+    padding: 3px;
+    margin-top: 15px;
+    border: 1px solid #909090;*/
+}
+
+.wp-caption.alignleft
+{
+    margin-right: 15px;
+}
+
+.wp-caption.alignright
+{
+    margin-left: 15px;
+}
+
+.wp-caption img
+{
+/*    border-bottom: 1px solid #909090;
+    padding-bottom: 5px;*/
+}
+
+.wp-caption .wp-caption-text
+{
+/*    font-size: 13px;
+    padding-top: 5px;*/
+}
+
+ol,
+ul
+{
+    /*padding: 15px 0 0;*/
+}
+
+ol li 
+{
+    /*margin-left: 15px;*/
+}
+
+li ol
+{
+    /*margin-left: 15px;*/
+}
+
+li ul
+{
+    /*margin-left: 15px;*/
+}
+
+.page-width,
+.page-header,
+.master-footer .site-footer
+{
+    max-width: 1200px;
+}
+
+.page-header,
+.page-width,
+.site-footer
+{
+    padding: 0px 20px;
+}
+
+.page-width,
+.block-features .feature,
+.master-footer .site-footer,
+.master-footer .credits
+{
+    overflow: hidden;
+}
+
+.master-header .site-info,
+.master-header .main-menu-wrap,
+.master-content .right-sidebar .page,
+.master-content .left-sidebar .page-sidebar,
+.block-features .feature:nth-child(odd) .feature-thumb,
+.master-footer .site-footer .widget,
+.master-footer .credits,
+.master-footer .credits .copyright
+{
+    float: left;
+}
+
+
+.master-header .contacts,
+.master-content .left-sidebar .page,
+.master-content .right-sidebar .page-sidebar,
+.block-features .feature:nth-child(even) .feature-thumb,
+.master-footer .credits .developer
+{
+    float: right;
+}
+
+.master-footer .site-footer .widget:first-child
+{
+    margin-left: 0;
+}
+
+.page-header,
+.page-width,
+.site-footer
+{
+    margin: 0 auto;
+}
+
+elements
+{
+    display: none;
+}
+/*
+        Header
+*/
+.master-header{
+    background-color: #F8F8F8;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    box-shadow: 0px 0px 5px #4E4E4E;
+    padding: 20px 0;
+}
+.master-header .site-logo img{
+    padding: 5px 0 0;
+}
+/* menu */
+.master-header .main-menu-wrap{
+    margin-left: 100px;
+    /*background: #fff;*/
+}
+.master-header .main-menu{
+    overflow: hidden;
+    list-style: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+.master-header .main-menu li{
+    float: left;
+    /*background: red;*/
+}
+.master-header .main-menu li a{
+    padding: 0 20px;
+    color: #333333;
+    text-decoration: none
+}
+.master-header .main-menu li a:hover{
+    color: #428bca;
+}
+.master-header .main-menu .current-menu-item a{
+    color: #428bca;
+}
+/*
+        Content
+*/
+.page-header{
+    /*width: 100%;*/
+    margin: 50px auto 30px;
+    background-color: #f8f8f8;
+}
+.master-content .page-width{
+    margin: 50px auto 30px;
+    padding: 20px 20px ;
+    background-color: #f8f8f8;
+}
+.home .master-content .page-width{
+    padding: 10px 20px 120px;
+    background: none;
+    margin: 50px auto 0;
+}
+.master-content .page-width .page{
+    width: 72%;
+}
+.home .master-content .page-width .page{
+    padding: 30px 95px 60px;
+    background-color: #f8f8f8;
+    width: calc(100% - 190px);
+}
+
+.master-content .subheading{
+    text-align: center;
+    background-image: url('images/line-through.jpg');
+    background-repeat: repeat-x;
+    background-position: 0 15px;
+}
+.master-content .subheading  span{
+    background-color: #fff;
+    padding: 0 10px;
+}
+.block-features{
+    padding: 80px 0 0;
+}
+.block-features .feature{
+    padding: 60px 0 0;
+}
+.block-features .feature .feature-thumb{
+    background-color: #f8f8f8;
+    min-height: 290px;
+    min-width: 380px
+}
+.block-features .feature:nth-child(odd) .feature-thumb{
+    margin: 0 30px 0 0;
+}
+.block-features .feature:nth-child(even) .feature-thumb{
+    margin: 0 0 0 30px;
+}
+.block-features .feature .feature-content{
+    
+}
+.block-rows .widget{
+    padding: 50px 0 0;
+}
+/*
+        Sidebar
+*/
+.page-sidebar{
+    width: 25%;
+}
+/*
+        Footer
+*/
+.master-footer{
+    background-color: #333333;
+    box-shadow: 0px 0px 5px #4E4E4E;
+    color: #fff;
+    padding: 65px 0;
+}
+.master-footer .site-footer .widget{
+    width: 22%;
+    margin: 0 0 0 4%;
+    font-size: 14px;
+    font-weight: bold;
+}
+.site-footer .widget .widget-title{
+    color: #fff;
+    font-size: 26px;
+    margin: 0 0 5px;
+}
+.master-footer .credits{
+    width: 100%;
+    border-top: 1px solid #555555;
+    padding: 15px 0 0;
+    font-size: 13px;
+    margin: 65px 0 0;
+}
+/*
+ *      Plugins
+*/
+/*
+        Media queries
+*/
+@media screen and (max-width: 1060px){
+}
+@media screen and (max-width: 920px){
+}
+@media screen and (max-width: 660px){
+}
