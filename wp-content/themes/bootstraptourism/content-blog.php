@@ -9,11 +9,6 @@
 <?php while ( have_posts() ) : the_post(); ?>
     <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
         <div class="post-thumb">
-            <div class="post-meta">
-                <span class="post-time"><?php the_time('F j, Y') ?></span>
-
-                <span class="post-comments"><i class="fa fa-comment"> <?php comments_number( 0 , 1 , '%' ); ?></i></span>
-            </div>
             
             <a href="<?php the_permalink(); ?>">
                 <?php 

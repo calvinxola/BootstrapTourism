@@ -34,21 +34,21 @@
                 </div>
             </div>
             
+            <div class="contacts">
+                <?php if (!dynamic_sidebar('Header')) :?><?php endif; ?>
+            </div>
+            
             <?php 
                 wp_nav_menu( 
                     array(
                         'theme_location' => 'main_menu',
-                        'menu_class' => 'main-menu menu' ,
+                        'menu_class' => 'main-menu menu closed' ,
                         'menu_id' => 'main-menu',
                         'container_class'=>'main-menu-wrap menu-wrap',
                         'container_id'=>''
                     )
                 );
             ?>
-            
-            <div class="contacts">
-                <?php if (!dynamic_sidebar('Header')) :?><?php endif; ?>
-            </div>
         </div>
     </header>
     

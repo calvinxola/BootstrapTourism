@@ -24,14 +24,15 @@
     //Scripts and Styles
     function bootstraptourism_scripts() {
         wp_register_style( 'style', get_stylesheet_uri(), array(), '1.0.0', all ); 
+        wp_enqueue_style( 'style');
         
         wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+        
+        wp_enqueue_style( 'genericons', get_template_directory_uri() .'/genericons/genericons.css', array(),null ,all);
     
         wp_enqueue_script( 'jquery', '/wp-includes/js/jquery/jquery.js' );
         
         wp_enqueue_script( 'custom-sj', get_template_directory_uri() . '/js/bootstraptourism.js' , array( 'jquery' ));
-    
-        wp_enqueue_style( 'style');
     }
     add_action( 'wp_enqueue_scripts', 'bootstraptourism_scripts' );
     
@@ -68,6 +69,20 @@
     add_theme_support( 'post-thumbnails',array( 'post','feature') );
     
     
+    //Length for post excerpts 
+    function custom_excerpt_length( $length ) {
+	return 45;
+    }
+    add_filter( 'excerpt_length', 'custom_excerpt_length' );
+    
+	
+    //Replacing the excerpt "more" text by a link  
+    function new_excerpt_more($more) {
+        return '<p class="more-link-wrap"><a class="more-link button" href="'. get_permalink($post->ID) . '">Read more</a><p>';
+    }
+    add_filter('excerpt_more', 'new_excerpt_more');
+    
+    
     //Custom post type (featuer)
     add_action( 'init', 'create_post_type' );
     function create_post_type() {
@@ -93,7 +108,6 @@
                     'editor',
                     'author' ,
                     'thumbnail',
-                    'excerpt', 
                     'custom-fields',
                     'page-attributes',
                     'revisions',  
@@ -108,20 +122,6 @@
         $obj = get_post_type_object( 'feature' );
         echo $obj->labels->name;
     }
-    
-    
-    //Length for post excerpts 
-    function custom_excerpt_length( $length ) {
-	return 40;
-    }
-    add_filter( 'excerpt_length', 'custom_excerpt_length' );
-    
-	
-    //Replacing the excerpt "more" text by a link  
-    function new_excerpt_more($more) {
-        return '<p class="more-link-wrap"><a class="more-link" href="'. get_permalink($post->ID) . '">Read more</a><p>';
-    }
-    add_filter('excerpt_more', 'new_excerpt_more');
     
     
     //Menus    
@@ -145,8 +145,8 @@
         'description'   => '',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h2 class="subheading"><span>',
-        'after_title'   => '</span></h2>'
+        'before_title'  => '<h1 class="subheading"><span>',
+        'after_title'   => '</span></h1>'
     ));
     
     register_sidebar(array(

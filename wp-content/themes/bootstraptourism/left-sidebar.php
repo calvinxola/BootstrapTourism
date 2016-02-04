@@ -1,7 +1,7 @@
 <?php
 /*
  *
- *      Template Name: Content - Left Sidebar
+ *      Template Name: Left Sidebar
  *
  */
  ?>
@@ -10,15 +10,13 @@
 
 <div class="page-width left-sidebar">  
     <?php 
-    get_sidebar();
-    
     if (have_posts()) : 
         get_template_part( 'content', 'post' );
     else : 
         get_template_part( 'content', 'none' ); 
-    endif;  
+    endif;   
     
-    get_sidebar(); 
+    get_sidebar();
     ?>
 </div>
 

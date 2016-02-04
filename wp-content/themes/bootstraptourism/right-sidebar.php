@@ -1,7 +1,7 @@
 <?php
 /*
  *
- *      Template Name: Content - Right Sidebar
+ *      Template Name: Right Sidebar
  *
  */
  ?>

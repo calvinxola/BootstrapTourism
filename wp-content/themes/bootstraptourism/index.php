@@ -11,10 +11,10 @@
 <div class="page-width">  
     <?php 
     if (have_posts()) : 
-        if (is_front_page() && !is_home()){
-            get_template_part( 'content', 'post' );
-        }else{
+        if (is_home()){
             get_template_part( 'content', 'blog' );
+        }else{
+            get_template_part( 'content', 'post' );
         }
     else : 
         get_template_part( 'content', 'none' ); 
@@ -23,7 +23,7 @@
     if (is_front_page() && !is_home()){
     ?>
         <div class="block-features">  
-            <h2 class="subheading"><span><?php features_archive_title(); ?></span></h2>
+            <h1 class="subheading"><span><?php features_archive_title(); ?></span></h1>
             <div class="features">
                 <?php
                 
@@ -34,7 +34,7 @@
                         setup_postdata($post); ?>
                         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                             <div class="feature-thumb">
-                                <?php the_post_thumbnail('large'); ?>
+                                <p class="icon"> </p>
                             </div>
                             
                             <div class="feature-content">

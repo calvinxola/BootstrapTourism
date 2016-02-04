@@ -1,10 +1,11 @@
-# BootstrapTourism;
-Please use included database;
+# BootstrapTourism
+Please use included SQL database
 
 # ADMIN LOGINS;
-username: admin;
-password: admin;
+username: admin,
+password: admin
 
-# PLUGINS TO BE INSTALLED;
-black-studio-tinymce-widget;
-wonderplugin-carousel;
+# PLUGINS TO BE INSTALLED
+black-studio-tinymce-widget,
+wonderplugin-carousel, 
+ninja forms
